@@ -33,8 +33,17 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#about">About</a>
                 </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#services" id="navbarServices" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarServices">
+                        <li><a class="dropdown-item" href="#services">All Services</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="services-gcp.html">GCP Cloud Services</a></li>
+                        <li><a class="dropdown-item" href="services-n8n.html">n8n Workflow Automation</a></li>
+                    </ul>
+                </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#services">Services</a>
+                    <a class="nav-link" href="#blog">Blog</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#contact">Contact</a>
@@ -45,27 +54,134 @@
 </nav>
 
     <!-- Hero Section -->
-    <header id="home" class="hero-section">
-        <div class="container text-center text-white">
-            <h1 class="display-4">Empowering Your Business with Cloud-Native Solutions</h1>
-            <p class="lead my-4">We specialize in Google Cloud Platform (GCP) and Agentic Workflow automation to drive your success.</p>
-            <a href="#contact" class="btn btn-primary btn-lg">Get in Touch</a>
+    <section id="home" class="hero-section d-flex align-items-center">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 text-white">
+                    <h1 class="display-4 fw-bold mb-4">Transform Your Business with Cloud & Automation</h1>
+                    <p class="lead mb-4">ITBIT delivers enterprise-grade cloud solutions and intelligent workflow automation that drive efficiency, scalability, and innovation for businesses of all sizes.</p>
+                    <div class="hero-features mb-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-check-circle text-success me-2"></i>
+                            <span>Google Cloud Platform Certified Experts</span>
+                        </div>
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="fas fa-check-circle text-success me-2"></i>
+                            <span>Customized n8n Workflow Automation</span>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-check-circle text-success me-2"></i>
+                            <span>Full-Stack Development Solutions</span>
+                        </div>
+                    </div>
+                    <div class="d-flex gap-3">
+                        <a href="#contact" class="btn btn-primary btn-lg">Get Started</a>
+                        <a href="#services" class="btn btn-outline-light btn-lg">Our Services</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 d-none d-lg-block">
+                    <div class="hero-image-container position-relative" style="height: 500px;">
+                        <img src="https://via.placeholder.com/600x500?text=Cloud+Infrastructure" class="position-absolute rounded-3 shadow" style="width: 60%; top: 0; right: 0; z-index: 1;" alt="Cloud Infrastructure">
+                        <img src="https://via.placeholder.com/500x400?text=Workflow+Automation" class="position-absolute rounded-3 shadow" style="width: 55%; bottom: 0; left: 0; z-index: 2;" alt="Workflow Automation">
+                    </div>
+                </div>
+            </div>
         </div>
-    </header>
+    </section>
 
     <main>
         <!-- About Section -->
         <section id="about" class="py-5">
             <div class="container">
-                <div class="row">
+                <div class="text-center mb-5">
+                    <h2>About ITBIT</h2>
+                    <p class="lead">Transforming Business Through Technology Excellence</p>
+                </div>
+                <div class="row align-items-center">
                     <div class="col-lg-6">
-                        <h2>About ITBIT</h2>
-                        <p>Based in Gurgaon, Haryana, ITBIT is your dedicated partner for digital transformation. We are a team of passionate developers and cloud experts focused on helping businesses innovate and scale efficiently.</p>
-                        <p>Our core mission is to leverage cutting-edge technologies like Google Cloud and intelligent automation to build robust, scalable, and cost-effective solutions that deliver real-world results.</p>
+                        <h3 class="mb-4">Who We Are</h3>
+                        <p>Founded in 2018 and headquartered in Gurgaon, ITBIT is a premier technology consultancy specializing in cloud infrastructure and workflow automation solutions. We combine deep technical expertise with strategic business acumen to deliver transformative digital solutions for enterprises and growing businesses alike.</p>
+                        
+                        <h3 class="mt-4 mb-3">Our Approach</h3>
+                        <div class="d-flex mb-3">
+                            <div class="me-3">
+                                <i class="fas fa-lightbulb text-primary fa-2x"></i>
+                            </div>
+                            <div>
+                                <h5>Strategic Consultation</h5>
+                                <p class="mb-0">We begin with understanding your unique business challenges and objectives to create tailored technology strategies.</p>
+                            </div>
+                        </div>
+                        <div class="d-flex mb-3">
+                            <div class="me-3">
+                                <i class="fas fa-cogs text-primary fa-2x"></i>
+                            </div>
+                            <div>
+                                <h5>Technical Excellence</h5>
+                                <p class="mb-0">Our team of certified engineers and developers implements best-in-class solutions using industry-leading practices.</p>
+                            </div>
+                        </div>
+                        <div class="d-flex">
+                            <div class="me-3">
+                                <i class="fas fa-chart-line text-primary fa-2x"></i>
+                            </div>
+                            <div>
+                                <h5>Continuous Optimization</h5>
+                                <p class="mb-0">We provide ongoing support and optimization to ensure your technology infrastructure evolves with your business.</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-lg-6 text-center">
-                        <!-- You can replace this with a photo of your team or office -->
-                        <img src="img/expert.png" class="img-fluid rounded" alt="About Us Image">
+                    <div class="col-lg-5 offset-lg-1">
+                        <div class="card border-0 shadow-sm">
+                            <div class="card-body p-4">
+                                <h4 class="card-title mb-4">Why Choose ITBIT</h4>
+                                <ul class="list-unstyled">
+                                    <li class="mb-3">
+                                        <div class="d-flex">
+                                            <i class="fas fa-check-circle text-success me-2 mt-1"></i>
+                                            <div>
+                                                <strong>Specialized Expertise</strong> in Google Cloud Platform and n8n workflow automation
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="mb-3">
+                                        <div class="d-flex">
+                                            <i class="fas fa-check-circle text-success me-2 mt-1"></i>
+                                            <div>
+                                                <strong>End-to-End Solutions</strong> from infrastructure design to implementation and support
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="mb-3">
+                                        <div class="d-flex">
+                                            <i class="fas fa-check-circle text-success me-2 mt-1"></i>
+                                            <div>
+                                                <strong>Cost-Optimization Focus</strong> to maximize ROI on technology investments
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="mb-3">
+                                        <div class="d-flex">
+                                            <i class="fas fa-check-circle text-success me-2 mt-1"></i>
+                                            <div>
+                                                <strong>Proven Track Record</strong> with clients across finance, healthcare, e-commerce, and manufacturing sectors
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="d-flex">
+                                            <i class="fas fa-check-circle text-success me-2 mt-1"></i>
+                                            <div>
+                                                <strong>Dedicated Support Team</strong> ensuring seamless operations and rapid issue resolution
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="text-center mt-4">
+                                    <a href="#contact" class="btn btn-primary">Schedule a Consultation</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -110,8 +226,175 @@
             </div>
         </section>
 
-        <!-- Contact Section -->
-        <section id="contact" class="py-5">
+        <!-- Blog Section -->
+        <section id="blog" class="py-5">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2>Latest From Our Blog</h2>
+                    <p class="lead">Insights, tutorials, and updates on cloud technology and automation</p>
+                </div>
+                <div class="row">
+                    <!-- Blog Post 1 -->
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card h-100 blog-card">
+                            <img src="https://via.placeholder.com/600x400?text=GCP+Services" class="card-img-top" alt="GCP Services">
+                            <div class="card-body">
+                                <div class="badge bg-primary text-white mb-2">Cloud Computing</div>
+                                <h5 class="card-title"><a href="blog/gcp-services-explained.html" class="text-dark">Top GCP Services Explained for Beginners</a></h5>
+                                <p class="card-text">A comprehensive guide to the most important Google Cloud Platform services that can help your business scale.</p>
+                            </div>
+                            <div class="card-footer bg-white">
+                                <small class="text-muted">August 20, 2024</small>
+                                <a href="blog/gcp-services-explained.html" class="float-end">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Blog Post 2 -->
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card h-100 blog-card">
+                            <img src="https://via.placeholder.com/600x400?text=Agentic+Workflows" class="card-img-top" alt="Agentic Workflows">
+                            <div class="card-body">
+                                <div class="badge bg-success text-white mb-2">Automation</div>
+                                <h5 class="card-title"><a href="blog/n8n-automation-workflow.html" class="text-dark">Building Intelligent Workflows with n8n</a></h5>
+                                <p class="card-text">Learn how to create powerful automation workflows using n8n to connect your apps and automate repetitive tasks.</p>
+                            </div>
+                            <div class="card-footer bg-white">
+                                <small class="text-muted">August 15, 2024</small>
+                                <a href="blog/n8n-automation-workflow.html" class="float-end">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Blog Post 3 -->
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="card h-100 blog-card">
+                            <img src="https://via.placeholder.com/600x400?text=Cloud+Cost" class="card-img-top" alt="Cloud Cost">
+                            <div class="card-body">
+                                <div class="badge bg-warning text-dark mb-2">Cost Management</div>
+                                <h5 class="card-title"><a href="blog/optimize-gcp-costs.html" class="text-dark">5 Strategies to Optimize Your GCP Costs</a></h5>
+                                <p class="card-text">Practical tips to help you manage and reduce your Google Cloud Platform spending without sacrificing performance.</p>
+                            </div>
+                            <div class="card-footer bg-white">
+                                <small class="text-muted">August 5, 2024</small>
+                                <a href="blog/optimize-gcp-costs.html" class="float-end">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-4">
+                    <a href="blog/index.html" class="btn btn-outline-primary">View All Posts</a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Testimonials Section - Commented out for now, will add after approval -->
+    <!--
+    <section id="testimonials" class="py-5 bg-light">
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col-12 text-center">
+                    <h2>What Our Clients Say</h2>
+                    <p class="lead">Trusted by businesses across India and beyond</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="row justify-content-center">
+                                    <div class="col-lg-8">
+                                        <div class="card border-0 shadow-sm p-4">
+                                            <div class="d-flex align-items-center mb-3">
+                                                <div class="flex-shrink-0">
+                                                    <img src="https://via.placeholder.com/60x60" class="rounded-circle" alt="Client">
+                                                </div>
+                                                <div class="flex-grow-1 ms-3">
+                                                    <h5 class="mb-0">Rajesh Kumar</h5>
+                                                    <p class="mb-0 text-muted">CTO, TechSolutions India</p>
+                                                </div>
+                                                <div class="text-warning">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                            </div>
+                                            <p class="mb-0 fst-italic">"ITBIT's GCP migration services transformed our infrastructure. Their team's expertise in cloud architecture and cost optimization helped us reduce our cloud expenses by 30% while improving application performance. Their post-migration support has been exceptional."</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row justify-content-center">
+                                    <div class="col-lg-8">
+                                        <div class="card border-0 shadow-sm p-4">
+                                            <div class="d-flex align-items-center mb-3">
+                                                <div class="flex-shrink-0">
+                                                    <img src="https://via.placeholder.com/60x60" class="rounded-circle" alt="Client">
+                                                </div>
+                                                <div class="flex-grow-1 ms-3">
+                                                    <h5 class="mb-0">Priya Sharma</h5>
+                                                    <p class="mb-0 text-muted">Marketing Director, GrowthMarketing</p>
+                                                </div>
+                                                <div class="text-warning">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                            </div>
+                                            <p class="mb-0 fst-italic">"The workflow automation solutions ITBIT built with n8n have completely transformed our marketing operations. What used to take days of manual work now happens automatically. Their team took time to understand our unique processes and delivered a solution that exceeded our expectations."</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="row justify-content-center">
+                                    <div class="col-lg-8">
+                                        <div class="card border-0 shadow-sm p-4">
+                                            <div class="d-flex align-items-center mb-3">
+                                                <div class="flex-shrink-0">
+                                                    <img src="https://via.placeholder.com/60x60" class="rounded-circle" alt="Client">
+                                                </div>
+                                                <div class="flex-grow-1 ms-3">
+                                                    <h5 class="mb-0">Vikram Singh</h5>
+                                                    <p class="mb-0 text-muted">CEO, RetailNexus</p>
+                                                </div>
+                                                <div class="text-warning">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star-half-alt"></i>
+                                                </div>
+                                            </div>
+                                            <p class="mb-0 fst-italic">"We engaged ITBIT to develop a custom e-commerce solution on GCP, and they delivered beyond our expectations. Their full-stack expertise and deep understanding of cloud architecture resulted in a scalable, high-performance platform that has significantly increased our conversion rates and customer satisfaction."</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center mt-4">
+                            <button class="btn btn-sm btn-primary mx-1" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                                <i class="fas fa-arrow-left"></i>
+                            </button>
+                            <button class="btn btn-sm btn-primary mx-1" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                                <i class="fas fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    -->
+    
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
             <div class="container">
                 <div class="text-center mb-5">
                     <h2>Contact Us</h2>
@@ -138,14 +421,8 @@
                     </div>
                     <div class="col-lg-6">
                         <h3>Send Us a Message</h3>
-                        <!-- 
-                            IMPORTANT: To make this form work without a backend, 
-                            you can use a free service like Formspree (formspree.io) or FormSubmit (formsubmit.co).
-                            1. Go to one of those sites.
-                            2. Create a new form endpoint for your email info@itbit.in.
-                            3. Replace the action="#" with the URL they provide.
-                        -->
-                        <form action="#" method="POST">
+                        <!-- Using Formspree for form submission without backend -->
+                        <form action="https://formspree.io/f/xvoerook" method="POST" id="contactForm">
                             <div class="mb-3">
                                 <input type="text" class="form-control" name="name" placeholder="Your Name" required>
                             </div>
@@ -159,6 +436,12 @@
                                 <textarea class="form-control" name="message" rows="5" placeholder="Your Message" required></textarea>
                             </div>
                             <button type="submit" class="btn btn-primary w-100">Send Message</button>
+                            <div id="form-success" class="alert alert-success mt-3" style="display: none;">
+                                Your message has been sent successfully! We'll get back to you soon.                            
+                            </div>
+                            <div id="form-error" class="alert alert-danger mt-3" style="display: none;">
+                                Oops! There was a problem sending your message. Please try again later.
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -167,14 +450,48 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-dark text-white text-center py-4">
+    <footer class="bg-dark text-white py-5">
         <div class="container">
-            <p>&copy; 2024 ITBIT. All Rights Reserved.</p>
-            <!-- Optional: Add social media links -->
-            <!-- 
-            <a href="#" class="text-white me-2"><i class="fab fa-linkedin"></i></a>
-            <a href="#" class="text-white me-2"><i class="fab fa-github"></i></a>
-            -->
+            <div class="row">
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="img/logo_300x300.png" alt="ITBIT Logo" style="height:40px; margin-right:10px;">
+                        <h5 class="mb-0">ITBIT</h5>
+                    </div>
+                    <p class="small">Your dedicated partner for GCP cloud services and agentic workflow automation solutions based in Gurgaon, Haryana.</p>
+                </div>
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#home" class="text-white">Home</a></li>
+                        <li><a href="#about" class="text-white">About</a></li>
+                        <li><a href="services-gcp.html" class="text-white">GCP Services</a></li>
+                        <li><a href="services-n8n.html" class="text-white">n8n Automation</a></li>
+                        <li><a href="blog/index.html" class="text-white">Blog</a></li>
+                        <li><a href="#contact" class="text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Connect With Us</h5>
+                    <div class="mb-3">
+                        <a href="https://www.linkedin.com/" target="_blank" class="text-white me-3"><i class="fab fa-linkedin fa-lg"></i></a>
+                        <a href="https://twitter.com/" target="_blank" class="text-white me-3"><i class="fab fa-twitter fa-lg"></i></a>
+                        <a href="https://github.com/" target="_blank" class="text-white me-3"><i class="fab fa-github fa-lg"></i></a>
+                        <a href="https://medium.com/" target="_blank" class="text-white"><i class="fab fa-medium fa-lg"></i></a>
+                    </div>
+                    <p class="small"><i class="fas fa-envelope me-2"></i><a href="mailto:info@itbit.in" class="text-white">info@itbit.in</a></p>
+                    <p class="small"><i class="fas fa-map-marker-alt me-2"></i>Gurgaon, Haryana, India</p>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">&copy; 2024 ITBIT. All Rights Reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="small mb-0">Privacy Policy | Terms of Service</p>
+                </div>
+            </div>
         </div>
     </footer>
 
