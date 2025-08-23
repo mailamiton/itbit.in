@@ -15,7 +15,7 @@
     <style>
         /* Service Page Specific Styles */
         .service-header {
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://via.placeholder.com/1920x600?text=n8n+Automation') no-repeat center center;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('img/n8n.png') no-repeat center center;
             background-size: cover;
             padding: 8rem 0;
             color: #fff;
@@ -62,6 +62,34 @@
         .integration-logo:hover {
             filter: grayscale(0%);
             opacity: 1;
+        }
+        
+        .integration-item {
+            padding: 15px;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            background-color: #f8f9fa;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+        }
+        
+        .integration-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .emoji-icon {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .integration-name {
+            font-size: 0.85rem;
+            font-weight: 500;
         }
         
         .workflow-step {
@@ -116,9 +144,11 @@
                 <li class="nav-item">
                     <a class="nav-link active" href="index.html#services">Services</a>
                 </li>
+                <!-- Blog nav link commented out
                 <li class="nav-item">
                     <a class="nav-link" href="blog/index.html">Blog</a>
                 </li>
+                -->
                 <li class="nav-item">
                     <a class="nav-link" href="index.html#contact">Contact</a>
                 </li>
@@ -166,7 +196,7 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="card workflow-diagram">
-                        <img src="https://via.placeholder.com/600x400?text=n8n+Workflow+Example" alt="n8n Workflow Example" class="img-fluid rounded">
+                        <img src="img/n8n.png" alt="n8n Workflow Example" class="img-fluid rounded">
                         <div class="card-body text-center">
                             <p class="card-text">Example of an n8n workflow connecting multiple services</p>
                         </div>
@@ -409,20 +439,82 @@
             <h3 class="text-center mb-4">Integration Ecosystem</h3>
             <p class="text-center">n8n connects with hundreds of applications and services. Here are some of the popular integrations we work with:</p>
             
-            <div class="row text-center">
-                <div class="col">
-                    <img src="https://via.placeholder.com/150x50?text=Google" alt="Google" class="integration-logo">
-                    <img src="https://via.placeholder.com/150x50?text=Slack" alt="Slack" class="integration-logo">
-                    <img src="https://via.placeholder.com/150x50?text=Salesforce" alt="Salesforce" class="integration-logo">
-                    <img src="https://via.placeholder.com/150x50?text=HubSpot" alt="HubSpot" class="integration-logo">
-                    <img src="https://via.placeholder.com/150x50?text=Notion" alt="Notion" class="integration-logo">
-                    <img src="https://via.placeholder.com/150x50?text=Trello" alt="Trello" class="integration-logo">
-                    <img src="https://via.placeholder.com/150x50?text=Asana" alt="Asana" class="integration-logo">
-                    <img src="https://via.placeholder.com/150x50?text=Jira" alt="Jira" class="integration-logo">
-                    <img src="https://via.placeholder.com/150x50?text=GitHub" alt="GitHub" class="integration-logo">
-                    <img src="https://via.placeholder.com/150x50?text=AWS" alt="AWS" class="integration-logo">
-                    <img src="https://via.placeholder.com/150x50?text=GCP" alt="GCP" class="integration-logo">
-                    <img src="https://via.placeholder.com/150x50?text=Stripe" alt="Stripe" class="integration-logo">
+            <div class="row text-center mt-4 mb-4">
+                <div class="col-lg-12">
+                    <div class="row justify-content-center">
+                        <div class="col-4 col-md-2 mb-4">
+                            <div class="integration-item">
+                                <div class="emoji-icon">🔍</div>
+                                <div class="integration-name">Google</div>
+                            </div>
+                        </div>
+                        <div class="col-4 col-md-2 mb-4">
+                            <div class="integration-item">
+                                <div class="emoji-icon">💬</div>
+                                <div class="integration-name">Slack</div>
+                            </div>
+                        </div>
+                        <div class="col-4 col-md-2 mb-4">
+                            <div class="integration-item">
+                                <div class="emoji-icon">☁️</div>
+                                <div class="integration-name">Salesforce</div>
+                            </div>
+                        </div>
+                        <div class="col-4 col-md-2 mb-4">
+                            <div class="integration-item">
+                                <div class="emoji-icon">📊</div>
+                                <div class="integration-name">HubSpot</div>
+                            </div>
+                        </div>
+                        <div class="col-4 col-md-2 mb-4">
+                            <div class="integration-item">
+                                <div class="emoji-icon">📝</div>
+                                <div class="integration-name">Notion</div>
+                            </div>
+                        </div>
+                        <div class="col-4 col-md-2 mb-4">
+                            <div class="integration-item">
+                                <div class="emoji-icon">📋</div>
+                                <div class="integration-name">Trello</div>
+                            </div>
+                        </div>
+                        <div class="col-4 col-md-2 mb-4">
+                            <div class="integration-item">
+                                <div class="emoji-icon">✅</div>
+                                <div class="integration-name">Asana</div>
+                            </div>
+                        </div>
+                        <div class="col-4 col-md-2 mb-4">
+                            <div class="integration-item">
+                                <div class="emoji-icon">🔧</div>
+                                <div class="integration-name">Jira</div>
+                            </div>
+                        </div>
+                        <div class="col-4 col-md-2 mb-4">
+                            <div class="integration-item">
+                                <div class="emoji-icon">🐙</div>
+                                <div class="integration-name">GitHub</div>
+                            </div>
+                        </div>
+                        <div class="col-4 col-md-2 mb-4">
+                            <div class="integration-item">
+                                <div class="emoji-icon">📦</div>
+                                <div class="integration-name">AWS</div>
+                            </div>
+                        </div>
+                        <div class="col-4 col-md-2 mb-4">
+                            <div class="integration-item">
+                                <div class="emoji-icon">☁️</div>
+                                <div class="integration-name">GCP</div>
+                            </div>
+                        </div>
+                        <div class="col-4 col-md-2 mb-4">
+                            <div class="integration-item">
+                                <div class="emoji-icon">💳</div>
+                                <div class="integration-name">Stripe</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <p class="text-center mt-4">Need an integration with a specific service? <a href="index.html#contact">Contact us</a> to discuss your requirements.</p>
@@ -524,7 +616,7 @@
                     <ul class="list-unstyled">
                         <li><a href="index.html#home" class="text-white">Home</a></li>
                         <li><a href="index.html#services" class="text-white">Services</a></li>
-                        <li><a href="blog/index.html" class="text-white">Blog</a></li>
+                        <!-- Blog link removed from footer -->
                         <li><a href="index.html#contact" class="text-white">Contact</a></li>
                     </ul>
                 </div>

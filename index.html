@@ -42,9 +42,11 @@
                         <li><a class="dropdown-item" href="services-n8n.html">n8n Workflow Automation</a></li>
                     </ul>
                 </li>
+                <!-- Blog nav link commented out
                 <li class="nav-item">
                     <a class="nav-link" href="#blog">Blog</a>
                 </li>
+                -->
                 <li class="nav-item">
                     <a class="nav-link" href="#contact">Contact</a>
                 </li>
@@ -230,67 +232,7 @@
             </div>
         </section>
 
-        <!-- Blog Section -->
-        <section id="blog" class="py-5">
-            <div class="container">
-                <div class="text-center mb-5">
-                    <h2>Latest From Our Blog</h2>
-                    <p class="lead">Insights, tutorials, and updates on cloud technology and automation</p>
-                </div>
-                <div class="row">
-                    <!-- Blog Post 1 -->
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="card h-100 blog-card">
-                            <img src="img/expert.png" class="card-img-top" alt="GCP Services">
-                            <div class="card-body">
-                                <div class="badge bg-primary text-white mb-2">Cloud Computing</div>
-                                <h5 class="card-title"><a href="blog/gcp-services-explained.html" class="text-dark">Top GCP Services Explained for Beginners</a></h5>
-                                <p class="card-text">A comprehensive guide to the most important Google Cloud Platform services that can help your business scale.</p>
-                            </div>
-                            <div class="card-footer bg-white">
-                                <small class="text-muted">August 20, 2024</small>
-                                <a href="blog/gcp-services-explained.html" class="float-end">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Blog Post 2 -->
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="card h-100 blog-card">
-                            <img src="img/automation.jpeg" class="card-img-top" alt="Agentic Workflows">
-                            <div class="card-body">
-                                <div class="badge bg-success text-white mb-2">Automation</div>
-                                <h5 class="card-title"><a href="blog/n8n-automation-workflow.html" class="text-dark">Building Intelligent Workflows with n8n</a></h5>
-                                <p class="card-text">Learn how to create powerful automation workflows using n8n to connect your apps and automate repetitive tasks.</p>
-                            </div>
-                            <div class="card-footer bg-white">
-                                <small class="text-muted">August 15, 2024</small>
-                                <a href="blog/n8n-automation-workflow.html" class="float-end">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Blog Post 3 -->
-                    <div class="col-lg-4 col-md-6 mb-4">
-                        <div class="card h-100 blog-card">
-                            <img src="img/automation1.jpg" class="card-img-top" alt="Cloud Cost">
-                            <div class="card-body">
-                                <div class="badge bg-warning text-dark mb-2">Cost Management</div>
-                                <h5 class="card-title"><a href="blog/optimize-gcp-costs.html" class="text-dark">5 Strategies to Optimize Your GCP Costs</a></h5>
-                                <p class="card-text">Practical tips to help you manage and reduce your Google Cloud Platform spending without sacrificing performance.</p>
-                            </div>
-                            <div class="card-footer bg-white">
-                                <small class="text-muted">August 5, 2024</small>
-                                <a href="blog/optimize-gcp-costs.html" class="float-end">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="text-center mt-4">
-                    <a href="blog/index.html" class="btn btn-outline-primary">View All Posts</a>
-                </div>
-            </div>
-        </section>
+    
         
         <!-- Testimonials Section - Commented out for now, will add after approval -->
     <!--
@@ -425,19 +367,19 @@
                     </div>
                     <div class="col-lg-6">
                         <h3>Send Us a Message</h3>
-                        <!-- Using Formspree for form submission without backend -->
-                        <form action="https://formspree.io/f/xvoerook" method="POST" id="contactForm">
+                        <!-- Using Vercel API endpoint for form submission -->
+                        <form id="contactForm">
                             <div class="mb-3">
-                                <input type="text" class="form-control" name="name" placeholder="Your Name" required>
+                                <input type="text" class="form-control" name="name" id="name" placeholder="Your Name" required>
                             </div>
                             <div class="mb-3">
-                                <input type="email" class="form-control" name="email" placeholder="Your Email" required>
+                                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
                             </div>
                             <div class="mb-3">
-                                <input type="text" class="form-control" name="subject" placeholder="Subject" required>
+                                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
                             </div>
                             <div class="mb-3">
-                                <textarea class="form-control" name="message" rows="5" placeholder="Your Message" required></textarea>
+                                <textarea class="form-control" name="message" id="message" rows="5" placeholder="Your Message" required></textarea>
                             </div>
                             <button type="submit" class="btn btn-primary w-100">Send Message</button>
                             <div id="form-success" class="alert alert-success mt-3" style="display: none;">
@@ -471,7 +413,7 @@
                         <li><a href="#about" class="text-white">About</a></li>
                         <li><a href="services-gcp.html" class="text-white">GCP Services</a></li>
                         <li><a href="services-n8n.html" class="text-white">n8n Automation</a></li>
-                        <li><a href="blog/index.html" class="text-white">Blog</a></li>
+                        <!-- Blog link removed from footer -->
                         <li><a href="#contact" class="text-white">Contact</a></li>
                     </ul>
                 </div>

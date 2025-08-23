@@ -67,21 +67,34 @@ document.addEventListener('DOMContentLoaded', function() {
     
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
             const formSuccess = document.getElementById('form-success');
             const formError = document.getElementById('form-error');
+            const submitButton = contactForm.querySelector('button[type="submit"]');
             
             // Hide any existing messages
             formSuccess.style.display = 'none';
             formError.style.display = 'none';
             
-            // Formspree will handle the actual form submission
-            // This is just for UI feedback after submission
-            fetch(contactForm.action, {
-                method: contactForm.method,
-                body: new FormData(contactForm),
+            // Disable the submit button and show loading state
+            submitButton.disabled = true;
+            submitButton.innerHTML = '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Sending...';
+            
+            // Get form data
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+            
+            // Send to our Vercel API endpoint
+            fetch('/api/send-email', {
+                method: 'POST',
                 headers: {
+                    'Content-Type': 'application/json',
                     'Accept': 'application/json'
-                }
+                },
+                body: JSON.stringify({ name, email, subject, message })
             })
             .then(response => {
                 if (response.ok) {
@@ -94,13 +107,21 @@ document.addEventListener('DOMContentLoaded', function() {
                     }, 5000);
                     return response.json();
                 } else {
-                    throw new Error('Form submission failed');
+                    return response.json().then(data => {
+                        throw new Error(data.error || 'Form submission failed');
+                    });
                 }
             })
             .catch(error => {
                 // Show error message
+                formError.textContent = error.message || 'There was a problem sending your message. Please try again later.';
                 formError.style.display = 'block';
                 console.error('Error:', error);
+            })
+            .finally(() => {
+                // Reset button state
+                submitButton.disabled = false;
+                submitButton.innerHTML = 'Send Message';
             });
         });
     }
