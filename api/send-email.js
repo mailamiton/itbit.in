@@ -32,17 +32,29 @@ export default async function handler(req, res) {
       },
     });
     
+    // Get current date and time
+    const now = new Date();
+    const formattedDate = now.toLocaleString('en-US', {
+      weekday: 'long',
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+      hour: '2-digit',
+      minute: '2-digit'
+    });
+
     // Email content
     const mailOptions = {
-      from: process.env.SMTP_FROM || 'noreply@itbit.in',
-      to: process.env.CONTACT_EMAIL || 'contact@itbit.in', // Where to receive contact form submissions
+      from: process.env.SMTP_FROM || 'contactus@itbit.in',
+      to: process.env.CONTACT_EMAIL || 'info@itbit.in', // Where to receive contact form submissions
       replyTo: email,
-      subject: `ITBIT Contact: ${subject}`,
-      text: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
+      subject: `ITBIT Contact: ${subject} - ${formattedDate}`,
+      text: `Name: ${name}\nEmail: ${email}\nDate: ${formattedDate}\n\nMessage:\n${message}`,
       html: `
-        <h3>New Contact Form Submission</h3>
+        <h3>New Contact Form Submission - ${formattedDate}</h3>
         <p><strong>Name:</strong> ${name}</p>
         <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Date:</strong> ${formattedDate}</p>
         <p><strong>Subject:</strong> ${subject}</p>
         <p><strong>Message:</strong></p>
         <p>${message.replace(/\n/g, '<br>')}</p>
