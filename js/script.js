@@ -6,8 +6,63 @@
 
 console.log('ITBIT Website JavaScript loaded');
 
+// Handle image loading errors and replace with emojis
+function handleImageErrors() {
+    const images = document.querySelectorAll('img');
+    
+    // Map of image alt text keywords to appropriate emojis
+    const emojiMap = {
+        'automation': '🤖',
+        'workflow': '⚙️',
+        'cloud': '☁️',
+        'infrastructure': '🏗️',
+        'service': '🛠️',
+        'analytics': '📊',
+        'data': '📈',
+        'security': '🔒',
+        'technology': '💻',
+        'client': '👥',
+        'team': '👥',
+        'person': '👤',
+        'contact': '📞',
+        'email': '✉️',
+        'logo': '🏢'
+    };
+    
+    images.forEach(img => {
+        img.addEventListener('error', function() {
+            // Get alt text and convert to lowercase
+            const altText = this.alt ? this.alt.toLowerCase() : '';
+            
+            // Find a matching emoji based on alt text
+            let emoji = '📷'; // Default camera emoji
+            
+            for (const [keyword, value] of Object.entries(emojiMap)) {
+                if (altText.includes(keyword)) {
+                    emoji = value;
+                    break;
+                }
+            }
+            
+            // Create a div to replace the image
+            const emojiContainer = document.createElement('div');
+            emojiContainer.className = 'emoji-fallback d-flex justify-content-center align-items-center bg-light rounded';
+            emojiContainer.style.width = '100%';
+            emojiContainer.style.height = '200px';
+            emojiContainer.style.fontSize = '5rem';
+            emojiContainer.innerHTML = emoji;
+            
+            // Replace the image with the emoji
+            this.parentNode.replaceChild(emojiContainer, this);
+        });
+    });
+}
+
 // Handle contact form submission
 document.addEventListener('DOMContentLoaded', function() {
+    // Initialize image error handling
+    handleImageErrors();
+    
     const contactForm = document.getElementById('contactForm');
     
     if (contactForm) {
