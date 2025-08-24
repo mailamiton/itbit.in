@@ -46,7 +46,7 @@ export default async function handler(req, res) {
     // Email content
     const mailOptions = {
       from: process.env.SMTP_FROM || 'contactus@itbit.in',
-      to: process.env.CONTACT_EMAIL || 'info@itbit.in', // Where to receive contact form submissions
+      to: process.env.TO_SEND_EMAIL || 'info@itbit.in', // Where to receive contact form submissions
       replyTo: email,
       subject: `ITBIT Contact: ${subject} - ${formattedDate}`,
       text: `Name: ${name}\nEmail: ${email}\nDate: ${formattedDate}\n\nMessage:\n${message}`,
